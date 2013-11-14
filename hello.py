@@ -28,9 +28,7 @@ def share():
 @app.subscriptions.login
 def login(user):
     print "user : %s" % user.token
-    print user.session
     user.contacts.insert(displayName="Vision for Glass", id="vision-for-glass")
-    user.timeline.post(text="Hello World!")
 
 if __name__ == '__main__':
-    app.run(port=8080)
+    app.run()
